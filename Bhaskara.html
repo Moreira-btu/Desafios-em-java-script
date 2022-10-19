@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resolvendo Bhaskara</title>
+    <style>
+        section{
+            border: 10px solid #999;
+            padding: 20px 20px 20px 20px ;
+            box-shadow: 13px 13px 13px rgba(0,0,0,7);
+        }
+        h1{
+            padding: 5px 5px 5px 5px ;
+            background: #999;
+            box-shadow: 10px 10px 10px  ;
+
+    
+        }
+        #res{
+            background-color: rgb(219, 213, 213);
+        }
+        input{
+            font-size: 15pt;
+            border-radius: 20px;
+            box-shadow: 10px 10px 10px  ;
+            width: 200px;
+            height: 50px;
+            transition:  1.5s;
+            position: relative;
+            right: -200px;
+            transition: all 2s ease-in-out;
+        }
+        input:hover {
+            transform: scaleX(1.5);
+        }
+        footer{
+            text-align: center;
+            margin-top: 200px;
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+    <header>
+        <h1>Resolvendo Bhaskara </h1>
+        
+    </header>
+    <div>
+        <strong><input type="button" title="calcular" name="calcular" id="calcular" value="Calcular" onclick="calcular()" ></strong><br><br><br>
+
+        
+    </div>
+    <div>
+        <span id="res">Considerando uma equação no formato <strong> ax<sup>2</sup> + bx + c = 0 </strong>, aperte o botão acima para calcular o valor de &#9651 .</span>
+    </div>
+    <footer>
+        <h3 id="footer">
+        &COPY;by Alex Moreira <br>
+        editado 17/10/2022 <br>
+        facebook & instagran
+    
+    </footer></section>
+    <script>
+        function calcular(){
+            let a =Number(window.prompt('Digite um valor para  a  '))
+            if(a <= 0){
+                window.alert('Por favor digite um número válido')
+
+            }
+            let b =Number(window.prompt('Agora para o  b'))
+            let c =Number(window.prompt('Por último o  c '))
+            let res = document.getElementById('res')
+            let delta = b ** 2 - (4* a * c)
+            
+            res.innerHTML='<h2>A equação atual é '+ a+'x<sup>2</sup>+'+b+'x'+c +'=0 <br> O cálculo realizado será &#9651 = '+ b +'**2-(4*'+a+'*'+c+')<br> O valor calculado foi &#9651 = '+delta +' .<h2>'
+            
+
+
+        }
+    </script>
+</body>
+</html>

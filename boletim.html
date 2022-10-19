@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boletim</title>
+    <style>
+        body{
+            text-align: center;
+            background-color: #999;
+            color: aliceblue;
+
+        }
+        header, h2{
+            background-color: #777;
+
+
+        }
+        section{
+            border: 10px solid white;
+            padding: 10px 10px 10px 10px ;
+            box-shadow: 10px 10px 10px rgba(0,0,0,4);
+
+        }
+        input{
+            border: 3px solid #666;
+            margin-bottom: 100px;
+            width: 200px;
+            height: 80px;
+
+        }
+        footer{
+            padding-top: 200px;
+           
+        }
+        h3 {
+            border: 4px solid #777;
+            box-shadow: 4px 4px 4px rgba(0,0,0,4);
+
+        }
+        #res {
+            background-color: #777;
+        }
+        #res h1 {
+            color: red;
+            background-color: aliceblue;
+            padding:10px 0px 20px 20px ;
+        }
+    </style>
+</head>
+<body>
+    <section>
+    <header>
+        <h1>Situação do aluno</h1>
+
+    </header>
+    <div>
+        <input title="notas" value="Entrar com as notas " type="button" id="notas" onclick="boletim()"
+        >
+    </div>
+    <div id="res">
+      <h2>Clique no botão acima para informar as notas do aluno</h2>
+    </div>
+</section>
+<footer>
+    <h3 id="footer">
+    &COPY;By Alex Moreira <br>
+    editado 17/10/2022
+
+</footer>
+    <script>
+        function boletim(){
+            let res = document.getElementById('res')
+            let nome = window.prompt('Qual é o nome do aluno ?')
+            let por =Number(window.prompt('Qual a nota referente a Português?'))
+            let mat = Number(window.prompt('Qual foi a nota referente a Matemática ?')) 
+            let cien = Number(window.prompt('Qual foi a nota referente a Ciência ? '))
+            let med = por + mat +cien 
+            let media = med / 3 
+              
+              if (media < 6){
+                res.innerHTML = 'Prezado aluno(a) '+ nome+ ' você está em <br><br><h1>RECUPERAÇÃO!!<h1><br><h2> Sua média de notas é '+media +' !<h2>'
+
+            }  else if ((media == 3) ||( med < 3)){
+                res.innerHTML = 'Prezado aluno(a) '+ nome+ ' você está <br><br><h1>REPROVADO!!<h1><br><h2> Sua média de notas é '+media +' !<h2>'
+            }  if ( media > 6) { 
+                res.innerHTML = '<h2>Prezado aluno(a) '+ nome+ ' você está <h2><br><br><h1>APROVADO!!<h1><br><h2> Sua média de notas é '+media +' !<h2>' 
+            }
+             
+        }
+        
+
+
+    </script>
+    
+</body>
+</html>

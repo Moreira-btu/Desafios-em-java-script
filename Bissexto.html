@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ano Bissexto</title>
+    <style>
+        body{
+            text-align: center;
+            border: 25 px solid rgb(19, 8, 8);
+            border-radius: 20px;
+            background-color: rgb(122, 122, 230);
+            
+            background-size: 100%;
+
+
+        }
+        #corpo{
+            background-color: #999;
+            color: aliceblue;
+            border-radius: 20px;
+        }
+        
+        img{
+            max-width: 100%;
+
+        }
+        h2 {
+            color: red;
+            background-color: aliceblue;
+            margin: 50px 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <section id="corpo">
+    <header>
+        <h1>Ano Bissexto</h1>
+        
+    </header>
+    <div>
+        <input type="button" title="veri" name="veri" id="veri" value="Verificar" onclick="verificar()" ><br><br><br>
+        
+
+        
+    </div>
+    <div>
+        <span id="res"> Clique e digite o ano para verificar se é Bissexto!</span>
+    </div>
+    <footer>
+        <h5 id="footer">
+        &COPY;by Alex Moreira <br>
+        editado 17/10/2022 <br>
+        facebook & instagran </h5>
+    
+    </footer>
+</section>
+<div>
+    <img src="img/Bissexto.jpg" alt="">
+</div>
+    <script>
+        function verificar(){
+            let ano = Number(window.prompt('Digite o ano que gostaria de verificar?'))
+            let res = document.getElementById('res')
+            if(ano % 4 == 0){
+            
+            res.innerHTML='<h2>O ano de '+ano+' É UM ANO BISSEXTO<h2>'
+            } else {
+         
+           res.innerHTML= '<h2>Esse ano de '+ ano +' NÂO É UM ANO BISSEXTO<h2>'
+        }  if (ano== 0 ){
+            res.innerHTML = 'Favor adicionar um ano !'
+        }  
+            }
+        
+    </script>
+</body>
+</html>

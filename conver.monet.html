@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor</title>
+    <style>
+        body{
+            text-align: center;
+            padding: 50px 0px 0px 0px ;
+            border: 5px solid black;
+            border-radius: 20px;
+            box-shadow: 0px 0px 5px 25px;
+
+        }
+        h1 ,h2 ,h3{
+            background-color: #999;
+            margin: 0px 0px 10px 0px;
+            padding: 10px;
+            color: aliceblue;
+        }
+        #converter {
+            width: 150px;
+            height: 50px;
+            padding: 0px 25px  5px;
+            margin: 20px 20px 20px 20px ;
+        }
+        footer{
+            margin-top: 100px;
+            
+        }
+        input{
+            border-radius: 10px;
+            text-shadow:5px 5px 5px ;
+            font-size: 18pt;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Conversor Monetário </h1>
+        <h2>Conversor de R$ --> US$</h2>
+    </header>
+    <div>
+        <input type="button" title="converter" name="converter" id="converter" value="Converter" onclick="conversor()" ><br>
+        <h3>Clique no botão para iniciar.</h3>
+    </div>
+    <div>
+        <span id="res"></span>
+    </div>
+    <footer>
+        <h3 id="footer">
+        &COPY;by Alex Moreira <br>
+        editado 17/10/2022 <br>
+        facebook & instagran
+    
+    </footer>
+    <script>
+        function conversor(){
+        let valor = Number(window.prompt('Digite o valor em reais que gostaria de converter em dólares '))
+        let dolar = valor / 5.25
+        let res = document.getElementById('res')
+        if(valor == 0) {
+            res.innerHTML= '<h2> Favor colocar um número válido<h2>'
+        } else if (valor > 0){
+        
+        res.innerHTML= '<h2>O valor convertido em dólar é '+dolar +' !<h2>'
+    }
+    }
+    </script>
+    
+</body>
+</html>

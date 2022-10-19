@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisador de Preço</title>
+    <style>
+        body{
+            text-align: center;
+            border: 10px solid white;
+            box-shadow: 0px 0px 50px ;
+        }
+        h1{
+            background-color: black;
+            color: #fff;
+            border-radius: 10px;
+
+
+        }
+        footer{
+            margin-top: 200px;
+            padding: auto;
+            background-color: black;
+            color: #fff;
+            border-radius: 10px;
+
+        }
+        input{
+            border: 5px solid #999;
+            border-radius: 5px;
+            width: 300px;
+            height: 90px;
+            font-size: 18pt;
+            box-shadow: 10px 10px 10px 10px;
+        }
+        #res {
+            margin-top: 100px;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>Analisador de Preço</h1>
+
+    </header>
+    <div>
+        <input title="verificar" value="Verificar Valores" type="button" id="verificar" onclick="verificador()"
+        >
+    </div>
+    <div id="res">
+
+    </div>
+    <footer>
+        <h5 id="footer">
+        &COPY;by Alex Moreira <br>
+        editado 17/10/2022 <br>
+        facebook & instagran </h5>
+    
+    </footer>
+    <script>
+        function verificador(){
+        let res = document.getElementById('res')
+        let pre =Number(window.prompt('Qual o valor do produto atual ?'))
+        let pass = Number(window.prompt('Qual o valor do produto anteriormente?'))
+        let dif= pre - pass
+        let por = dif /pass * 100 
+        if ( pre > pass){
+        res.innerHTML= '<h2>O produto custava R$'+pass+ ' e agora está custando R$'+pre+'<br> O preço subiu  R$'+ dif + " em relação ao preço anterior <br> Uma variação de "+por +'% para cima !!<h2>'
+        } else  {
+            res.innerHTML= '<h2>O produto custava R$'+pass+ ' e agora está custando R$'+pre+'<br> O preço desceu  R$'+ dif + " em relação ao preço anterior <br> Uma variação de "+por +'% para baixo !!<h2>'
+        } if ( pre== 0 || pass == 0){
+            res.innerHTML= ' <h2> Faltou algum dado! Recomece o Processo<h2>'
+        }
+}
+
+
+    </script>
+    
+</body>
+</html>

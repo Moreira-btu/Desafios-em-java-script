@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 02</title>
+    <style>
+        body{
+            padding-top: 100px;
+            text-align: center;
+            background-color: #999;
+            border: 10px  solid white;
+            box-shadow: 5px 5px 5px ;
+            margin: 0px 100px ;
+            margin-top: 100px;
+            
+        }
+        #header{
+            padding-top: 100px;
+            background-color: #666;
+            color: azure;
+        }
+        input {
+            border: 5px solid #777;
+            box-shadow: 10px 10px 10px ;
+            width: 200px;
+            height: 80px;
+        }
+        footer{
+            padding-top: 100px;
+            padding-bottom: opx;
+        }
+        #res {
+            padding-top: 200px;
+            margin: 20px 20px 20px 20px ;
+            background-color: aliceblue;
+            padding: 100px;
+
+        }
+       
+    </style>
+</head>
+<body>
+    <header>
+    <h1>Calculando o Troco !!</h1>
+    <input title="produto" value="Comprar Produto" type="button" name="produto" id="produto"onclick="comprar()" >
+
+</header>
+
+
+<footer>
+    <h3 id="footer">
+    &COPY;by Alex Moreira <br>
+    editado 17/10/2022 <br>
+    facebook & instagran
+
+</footer>
+    <script>
+        function comprar(){
+            let pro = document.getElementsByName('produto')
+           let nome= window.prompt('Qual produto você gostaria de comprar?')
+           let pre =Number(window.prompt('Qual é  o valor do produto?'))
+           let din =Number(window.prompt('Qual o valor da nota que você fará o pagamento?'))
+           let tro = din - pre
+           window.confirm('Seu produto '+ nome + ' custa R$'+pre+ ' , você pagou com o valor de R$'+din+ ' e seu troco é R$'+ tro+' !')
+        
+        }
+
+    </script>
+    
+</body>
+</html>

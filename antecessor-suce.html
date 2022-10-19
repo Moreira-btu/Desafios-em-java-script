@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antecessor e Sucessor</title>,
+    <style>
+        body{
+            text-align: center;
+            background-color: #999;
+            border: 10px  solid white;
+            box-shadow: 5px 5px 5px ;
+            margin: 00px 100px ;
+            
+        }
+        #header{
+            background-color: #666;
+            color: azure;
+        }
+        input {
+            border: 5px solid #777;
+            box-shadow: 10px 10px 10px ;
+        }
+        footer{
+            padding-top: 100px;
+            padding-bottom: opx;
+        }
+        #res {
+            padding-top: 200px;
+            margin: 20px 20px 20px 20px ;
+            background-color: aliceblue;
+            padding: 100px;
+
+        }
+       
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="header">Antes e depois </h1>
+        <br>
+       <h2> <label for="valor">Digite um Número</label></h2><input name="valor" id="valor" placeholder="Escolha um número" type="number"></h2>
+        <br><br><br>
+        <input name="botao" id="botao" onclick="resposta()" value="Antecessor e Sucessor" type="button">
+    </header>
+      <div id="res">
+
+      </div>
+    <footer>
+        <h3 id="footer">
+        &COPY;by Alex Moreira <br>
+        editado 17/10/2022
+        facebook & instagran
+    
+    </footer>
+    <script>
+      
+       
+        let res = document.getElementById('res')
+        
+        function resposta() {
+         let num =document.getElementById('valor')
+         let n = num.value
+        let ant = n -1
+        let suc = n*2 / 2 + 1
+        if(n == 0){
+            res.innerHTML = 'Digite um número válido'
+        }else {
+        res.innerHTML = ('<h1>O Antecessor de '+n+' é '+ant+' !  <br>E o Sucessor de '+n+' é '+ suc+' !<h1>' )
+}
+}
+
+
+
+    </script>
+</body>
+</html>

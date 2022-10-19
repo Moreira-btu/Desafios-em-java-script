@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular Descontos</title>
+    <style>
+        body{
+            text-align: center;
+            padding: 50px 0px 0px 0px ;
+            border: 5px solid black;
+            border-radius: 20px;
+            box-shadow: 0px 0px 5px 25px;
+
+        }
+        h1 ,h2 ,h3{
+            background-color: #999;
+            margin: 0px 0px 10px 0px;
+            padding: 10px;
+            color: aliceblue;
+        }
+        #converter {
+            width: 150px;
+            height: 50px;
+            padding: 0px 25px  5px;
+            margin: 20px 20px 20px 20px ;
+        }
+        footer{
+            margin-top: 100px;
+            
+        }
+        input{
+            border-radius: 10px;
+            text-shadow:5px 5px 5px ;
+            font-size: 18pt;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Calcular Desconto </h1>
+        
+    </header>
+    <div>
+        <input type="button" title="desconto" name="desconto" id="desconto" value="desconto" onclick="desconto10()" ><br><br><br>
+        
+    </div>
+    <div>
+        <span id="res">Clique no botão para iniciar.</span>
+    </div>
+    <footer>
+        <h3 id="footer">
+        &COPY;by Alex Moreira <br>
+        editado 17/10/2022 <br>
+        facebook & instagran
+    
+    </footer>
+    <script>
+        function desconto10(){
+            let des = window.prompt('Qual produto você gostaria de comprar?')
+            let pre = Number(window.prompt('Qual é o valor do '+ des+' ?'))
+            let res = document.getElementById('res')
+            let num = (pre /100)*10
+            let numdes = pre - num
+            
+             
+            res.innerHTML= '<h2>Calculando desconto de 10% para '+ des +' ! <br>   O preço original era R$'+pre+' . <br> Você acaba de ganhar R$'+num+' de desconto (-10%) <br> No fim, você vai pagar R$ '+ numdes +' no seu produto '+des+ ' !<h2>'
+        } 
+        
+
+        
+        
+    </script>
+    
+</body>
+</html>
