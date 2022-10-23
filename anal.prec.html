@@ -10,11 +10,21 @@
             text-align: center;
             border: 10px solid white;
             box-shadow: 0px 0px 50px ;
+            
+            
+        }
+            
+        div {
+            max-width: 100vw;
+            min-width: 80vw;
+            
         }
         h1{
             background-color: black;
             color: #fff;
             border-radius: 10px;
+            min-width: 80vw;
+            max-width: 100vw;
 
 
         }
@@ -24,6 +34,8 @@
             background-color: black;
             color: #fff;
             border-radius: 10px;
+            min-width: 80vw;
+            max-width: 100vw;
 
         }
         input{
@@ -33,14 +45,19 @@
             height: 90px;
             font-size: 18pt;
             box-shadow: 10px 10px 10px 10px;
+            min-width: 80vw;
+            max-width: 100vw;
         }
         #res {
             margin-top: 100px;
+            min-width: 80vw;
+            max-width: 100vw;
         }
     </style>
 
 </head>
 <body>
+    <div id="corpo">
     <header>
         <h1>Analisador de Preço</h1>
 
@@ -59,6 +76,7 @@
         facebook & instagran </h5>
     
     </footer>
+</div>
     <script>
         function verificador(){
         let res = document.getElementById('res')
